@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,17 +9,21 @@
   <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 
 </head>
+
 <body class="bg-gray-800 text-white pt-20">
-    
-  <a class="absolute left-4 top-3	 flex items-center  px-4 py-2 font-semibold  bg-gradient-to-r from-slate-300 to-zinc-300 text-gray-800  rounded-sm shadow-sm " href="../../menu.html">
+
+  <a class="absolute left-4 top-3	 flex items-center  px-4 py-2 font-semibold  bg-gradient-to-r from-slate-300 to-zinc-300 text-gray-800  rounded-sm shadow-sm "
+    href="../../menu.html">
     <span class="text-md">&#8678;</span>
   </a>
 
   <h1 class="font-medium text-5xl text-center mb-10">Les Espacements</h1>
 
   <nav class="max-w-5xl mx-auto flex flex-wrap justify-center gap-6 mb-24 px-10">
-    <a class="flex-shrink-0  rounded-lg py-2 w-60 border border-gray-50/50 bg-blue-600 hover:bg-blue-700 text-gray-200 text-lg flex justify-center items-center cursor-pointer" href="./1.espacement.html">Margin / Padding </a>
-    <a class="flex-shrink-0  rounded-lg py-2 w-60 border border-gray-50/50 bg-blue-600 hover:bg-blue-700 text-gray-200 text-lg flex justify-center items-center cursor-pointer"  href="./2.taille.html">Width / Height</a>
+    <a class="flex-shrink-0  rounded-lg py-2 w-60 border border-gray-50/50 bg-blue-600 hover:bg-blue-700 text-gray-200 text-lg flex justify-center items-center cursor-pointer"
+      href="./1.espacement.html">Margin / Padding </a>
+    <a class="flex-shrink-0  rounded-lg py-2 w-60 border border-gray-50/50 bg-blue-600 hover:bg-blue-700 text-gray-200 text-lg flex justify-center items-center cursor-pointer"
+      href="./2.taille.html">Width / Height</a>
   </nav>
 
 
@@ -27,9 +32,9 @@
 
   <div class="max-w-4xl mx-auto pb-60 px-4">
 
-      <h2 class="text-3xl  text-gray-50  mt-10 mb-5">Padding</h2>
+    <h2 class="text-3xl  text-gray-50  mt-10 mb-5">Padding</h2>
 
-      <!--
+    <!--
         🧮 Échelle de padding : de p-0 à p-96
         Ex : p-4 → padding dans toutes les directions
 
@@ -51,17 +56,17 @@
             p-[10px] → Crée une classe arbitraire ajoutée au fichier final
       -->
 
-      <p class="bg-green-500">Lorem ipsum dolor sit amet.</p>
-      <p class="bg-green-500">Lorem ipsum dolor sit amet.</p>
-      <p class="bg-green-500">Lorem ipsum dolor sit amet.</p>
-      <p class="bg-green-500">Lorem ipsum dolor sit amet.</p>
-      <p class="bg-green-500">Lorem ipsum dolor sit amet.</p>
+    <p class="p-5 bg-green-500">Lorem ipsum dolor sit amet.</p>
+    <p class=" pt-5 bg-green-500">Lorem ipsum dolor sit amet.</p>
+    <p class="bg-green-500 pl-3">Lorem ipsum dolor sit amet.</p>
+    <p class="bg-green-500 p-[10px]">Lorem ipsum dolor sit amet.</p>
+    <p class="bg-green-500">Lorem ipsum dolor sit amet.</p>
 
-      
 
-      <h2 class="text-3xl  text-gray-50  mt-10 mb-5">Margin</h2>
 
-      <!--
+    <h2 class="text-3xl  text-gray-50  mt-10 mb-5">Margin</h2>
+
+    <!--
         🟧 Les marges fonctionnent exactement comme le padding :
         - m-0 à m-96
         - mt-4, mx-2, mb-1, etc.
@@ -76,17 +81,17 @@
         ➖ Marges négatives :
             -m-2, -mt-4, etc.
       -->
-            
-      <p class="bg-green-500">Lorem ipsum dolor sit amet.</p>
-      <p class="bg-green-500">Lorem ipsum dolor sit amet.</p>
-      <p class="bg-green-500">Lorem ipsum dolor sit amet.</p>
-      <p class="bg-green-500">Lorem ipsum dolor sit amet.</p>
-      <p class="bg-green-500">Lorem ipsum dolor sit amet.</p>
+
+    <p class="bg-green-500 mb-5">Lorem ipsum dolor sit amet.</p>
+    <p class="bg-green-500">Lorem ipsum dolor sit amet.</p>
+    <p class="bg-green-500">Lorem ipsum dolor sit amet.</p>
+    <p class="bg-green-500">Lorem ipsum dolor sit amet.</p>
+    <p class="bg-green-500 ml-6">Lorem ipsum dolor sit amet.</p>
 
 
-      <h2 class="text-3xl  text-gray-50 mt-10 mb-5">Marge entre les enfants</h2>
+    <h2 class="text-3xl  text-gray-50 mt-10 mb-5">Marge entre les enfants</h2>
 
-      <!--
+    <!--
         📏 Marge entre enfants :
         - space-x-4 → espace horizontal entre enfants
         - space-y-2 → espace vertical
@@ -104,13 +109,14 @@
         }
       -->
 
-      <div class="">
-        <button class="bg-teal-400 rounded p-3 text-gray-800">01</button>
-        <button class="bg-teal-400 rounded p-3 text-gray-800">02</button>
-        <button class="bg-teal-400 rounded p-3 text-gray-800">03</button>
-      </div>
+    <div class="space-x-3">
+      <button class="bg-teal-400 rounded p-3 text-gray-800">01</button>
+      <button class="bg-teal-400 rounded p-3 text-gray-800">02</button>
+      <button class="bg-teal-400 rounded p-3 text-gray-800">03</button>
+    </div>
 
   </div>
-  
+
 </body>
+
 </html>
