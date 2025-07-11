@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Layout</title>
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body class="bg-gray-800 text-white pt-20">
+    
+  <a class="absolute left-4 top-3	 flex items-center  px-4 py-2 font-semibold  bg-gradient-to-r from-slate-300 to-zinc-300 text-gray-800  rounded-sm shadow-sm " href="../../menu.html">
+    <span class="text-md">&#8678;</span>
+  </a>
+
+  <h1 class="font-medium text-5xl  text-center mb-24">Disposition 🧱</h1>
+
+    <hr class="border-gray-50/35">
+     <!-- Contenu de la leçon -->
+
+     <div class="max-w-4xl mx-auto pb-60 px-4">
+
+      <h2 class="text-3xl  text-gray-50 mt-10 pb-5">Le container</h2>
+      <!--
+        📦 Le container :
+        - La classe container est incluse par défaut dans Tailwind
+        - Elle crée un conteneur avec une largeur max adaptée aux breakpoints
+        - À tester hors du container principal déjà en place sur la page
+
+        💡 Pour plus de contrôle, on préfère souvent une solution personnalisée :
+          Ex : max-w-xl mx-auto
+      -->
+      <div class="bg-red-400 pt-10 mb-10"></div>
+      <div class="bg-blue-400 pt-10"></div>
+
+
+      <h2 class="text-3xl  text-gray-50 mt-10 pb-5">Display</h2>
+      <!--
+        🧱 Display :
+        - block, inline-block, inline
+        - flex, inline-flex
+        - grid, inline-grid
+        - invisible (visibility: hidden), hidden (display: none)
+      -->
+
+      <p>Lorem ipsum dolor sit amet.</p>
+      <div class="w-10 h-10 bg-blue-400"></div>
+
+      <h2 class="text-3xl  text-gray-50 mt-10 pb-5">Box Sizing/Floats/Clear</h2>
+      <!--
+        📐 Box sizing :
+        - box-border (par défaut) ou box-content
+
+        🚢 Box sizing / Float / Clear :
+        - float-left, float-right, float-none, clear-both
+      -->
+      <p class="mb-4 text-lg">Test box-sizing 🔽</p>
+      <div class="p-10 mb-12 border-4 border-gray-50 bg-amber-400 w-full"></div>
+      
+      
+      
+      <p class="text-3xl lg:text-4xl text-gray-50 mt-10 pb-5">Test floats 🔽</p>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt nostrum molestias mollitia. Repellat, eveniet quidem? <div class="w-10 h-10 bg-red-400  mr-2"></div> Itaque odit quo fugit quidem, perspiciatis error rem, minima officia iure nesciunt dolor quisquam voluptate, voluptatum eaque? Suscipit, ipsam iure! Nostrum quisquam iusto aut maxime dolore ea nobis blanditiis corrupti impedit cupiditate nisi, exercitationem quos?</p>
+
+      <!-- overflow ou clear both pour le bug des floats -->
+      <div class="mt-10 mb-20 bg-amber-50 overflow-auto">
+        <div class="w-10 h-10 bg-blue-400 "></div>
+        <div class="w-10 h-10 bg-green-400 "></div>
+        <p class="clear-both"></p>
+      </div>
+      
+      
+
+
+      <h2 class="text-3xl  text-gray-50 mt-10 pb-5">Object-fit / position</h2>
+      <!--
+        🖼️ Gère l'affichage d'une image via l'élément <img> :
+        - object-fit: object-cover, object-contain, object-fill, object-none
+        - object-position: object-top, object-center, object-bottom, object-left, object-right...
+      -->
+      <img src="./img-bg.jpg" class=" block w-96 h-96 ">
+
+
+
+      <h2 class="text-3xl  text-gray-50 mt-10 pb-5">Position</h2>
+      <!--
+        📌 Position :
+        - Positionner un élément : static, relative, absolute, fixed, sticky
+        - Pour déplacer un élément positionné : top-0, right-4, bottom-96, etc. 
+        - Valeurs négatives possibles : -top-20
+        - inset-0 applique top, right, bottom et left à 0
+        - Valeurs arbitraires : top-[157px], right-[50%]...
+      -->
+
+      <div class="w-32 h-32  bg-green-400 "></div>
+
+
+      <h2 class="text-3xl  text-gray-50 mt-10 pb-5">Z-Index</h2>
+      <!--
+        🗂️ Z-Index pour gèrer l’empilement de certains contextes d'empilement (position + z-index) :
+        - z-0, z-10, z-20, z-30, z-auto
+      -->
+
+
+      <div class="w-32 h-32 relative bg-blue-400 ">
+          <div class="w-20 h-20 bg-red-400 absolute"></div>
+          <div class="w-20 h-20 bg-white absolute"></div>
+      </div>
+      
+
+      
+      <h2 class="text-3xl  text-gray-50 mt-10 pb-5">Transform</h2>
+      <!--
+      🎯 Transform :
+      - Valeurs absolues : translate-x-5, translate-y-10
+      - Valeur relatives : translate-x-1/2, translate-y-full
+      - Valeurs négatives  : -translate-x-10
+
+      ➕ Utiliser d'autres types de transformation :
+        - transform-scale, de 0 à 200 par pas de 25, ou valeur arbitraire : scale-150, scale-[3]
+        - rotate-45, rotate-180
+        - skew-x-12, skew-y-6
+      -->
+
+      <div class="w-32 h-32  bg-green-400"></div>
+
+      
+    </div>
+</body>
+</html>

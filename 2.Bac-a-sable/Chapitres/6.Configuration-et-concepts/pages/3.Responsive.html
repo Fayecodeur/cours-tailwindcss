@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Responsive</title>
+    <link rel="stylesheet" href="../styles/output.css" />
+
+  </head>
+  <body class="bg-gray-800 text-white pt-20">
+    <a
+      class="absolute left-4 top-3 flex items-center px-4 py-2 font-semibold bg-gradient-to-r from-slate-300 to-zinc-300 text-gray-800 rounded-sm shadow-sm"
+      href="../../../menu.html"
+    >
+      <span class="text-md">&#8678;</span>
+    </a>
+
+    <h1
+      class="font-medium text-5xl lg:text-6xl 3xl:bg-red-400 text-center mb-10"
+    >
+      Responsive
+    </h1>
+
+    <nav
+      class="max-w-5xl mx-auto flex flex-wrap justify-center gap-6 mb-24 px-10"
+    >
+      <a class="c-link-btn-nav" href="./1.Personnalisation.html"
+        >Personnalisation</a
+      >
+      <a class="c-link-btn-nav" href="./2.Variants.html">Variants</a>
+      <a class="c-link-btn-nav" href="./3.Responsive.html">Responsive</a>
+      <a class="c-link-btn-nav" href="./4.Animations-transitions.html"
+        >Animations-transitions</a
+      >
+      <a class="c-link-btn-nav" href="./5.mode-sombre.html">Mode sombre</a>
+    </nav>
+
+    <hr class="border-gray-50/35" />
+    <!-- Contenu de la leçon -->
+
+    <div class="max-w-4xl mx-auto pb-60 px-4">
+      <h2 class="text-3xl  text-gray-50 mt-10 pb-5">
+        Les "breakpoints"
+      </h2>
+      <!--
+        On gère le responsive avec Tailwind grâce à des variants, allant par défaut de `sm` à `2xl`.
+
+        Il suffit d’utiliser le variant souhaité suivi de la classe à appliquer lorsque cette largeur d’écran est atteinte.
+        Exemple : md:bg-red-400 → Le fond passe en rouge à partir de la taille md.
+
+        Voici les valeurs par défaut des breakpoints :
+          - sm : 640px
+          - md : 768px
+          - lg : 1024px
+          - xl : 1280px
+          - 2xl : 1536px
+
+        Par défaut les variants responsive representent des media queries mobile-first. 
+        Mais on peut utiliser des media-queries desktop-first en plaçant "max" devant le variant.
+
+        max-lg:bg-red-400 => @media (width <= 64rem) {}
+      -->
+        
+      <!-- Ex : sm:text-md lg:text-xl xl:text-3xl 2xl:text-6xl -->
+      <p class="text-sm mb-20">Je change de taille en fonction de l'écran.</p>
+
+      <h2 class="text-3xl  text-gray-50 mt-10 pb-5">
+        Toggle un élément
+      </h2>
+      <!-- hidden sm:block -->
+      <div class=" bg-red-600 size-40 mb-20"></div>
+
+      <h2 class="text-3xl  text-gray-50 mt-10 pb-5">
+        Flexbox rangée / colonne
+      </h2>
+      <div class="flex flex-col mb-20">
+        <div class="w-16 h-16 bg-green-400 m-2"></div>
+        <div class="w-16 h-16 bg-green-400 m-2"></div>
+        <div class="w-16 h-16 bg-green-400 m-2"></div>
+        <div class="w-16 h-16 bg-green-400 m-2"></div>
+        <div class="w-16 h-16 bg-green-400 m-2"></div>
+        <div class="w-16 h-16 bg-green-400 m-2"></div>
+      </div>
+
+      <h2 class="text-3xl  text-gray-50 mt-10 pb-5">
+        Créer un intervalle responsive
+      </h2>
+      <!--
+        Pour appliquer du style à une plage précise de largeur d’écran, on peut chaîner deux variants responsive.
+
+        Exemple : sm:max-md:bg-green-400
+        → Applique un fond vert uniquement **entre sm et md inclus**.
+      -->
+      <p
+        class="bg-blue-200  p-6 mb-20 text-gray-800 text-xl"
+      >
+        Comment prendre soin de votre appareil photo ?
+      </p>
+
+
+      <h2 class="text-3xl  text-gray-50 mt-10 pb-5">
+        Variant responsive arbitraire
+      </h2>
+      <!--
+        On peut créer des variants responsive arbitraires :
+        - min-[500px]:bg-red-400
+        - max-[700px]:bg-red-400
+      -->
+      <p
+        class="bg-blue-200  p-6 mb-20 text-gray-800 text-xl"
+      >
+      </p>
+
+      <h2 class="text-3xl  text-gray-50 mt-10 pb-5">
+        Utiliser les container queries
+      </h2>
+
+      <!-- Les container queries permettent d'appliquer des changements aux éléments enfants d'un container parent, par rapport à sa taille, et non par rapport à la taille du viewport comme avec les media queries.
+      Ce nouveau concept CSS peut s'avérer utile pour styliser des composants réutilisables.
+      
+      On doit d'abord marquer le parent avec @container, puis on peut utiliser @md/lg/sm/etc...:classeÀAjouter
+
+      Ex : @md:bg-red-400, // Le fond passe en rouge quand la parent est plus grand que la taille md.
+
+      On peut aussi nommer les containers, notamment si on en utilise plusieurs containers imbriqués.
+      Ex : @container/card => @lg/card:p-40
+      -->
+
+      <div class=" border border-gray-600 rounded">
+        <p class="text-lg p-5">
+          On modifie ce texte par rapport à la largeur du parent.
+        </p>
+      </div>
+    </div>
+  </body>
+</html>

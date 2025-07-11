@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bordures</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  </head>
+  <body class="bg-gray-800 text-white pt-20">
+    <a
+      class="absolute left-4 top-3 flex items-center px-4 py-2 font-semibold bg-gradient-to-r from-slate-300 to-zinc-300 text-gray-800 rounded-sm shadow-sm"
+      href="../../menu.html"
+    >
+      <span class="text-md">&#8678;</span>
+    </a>
+
+    <h1 class="font-medium text-5xl text-center mb-10">Bordures</h1>
+
+    <nav class="max-w-5xl mx-auto flex flex-wrap justify-center gap-6 mb-24 px-10">
+      <a
+        class="flex-shrink-0 rounded-lg py-2 w-60 border border-gray-50/50 bg-blue-600 hover:bg-blue-700 text-gray-200 text-lg flex justify-center items-center cursor-pointer"
+        href="./1.couleurs-et-fonds.html"
+        >Couleurs et fonds</a
+      >
+      <a
+        class="flex-shrink-0 rounded-lg py-2 w-60 border border-gray-50/50 bg-blue-600 hover:bg-blue-700 text-gray-200 text-lg flex justify-center items-center cursor-pointer"
+        href="./2.bordures.html"
+        >Bordures</a
+      >
+    </nav>
+
+    <hr class="border-gray-50/35" />
+    <!-- Contenu de la leçon -->
+
+    <div class="max-w-4xl mx-auto pb-60 px-4">
+      <h2 class="text-3xl  text-gray-50 mt-10 pb-5">
+        Border Radius
+      </h2>
+      <!--
+        🟢 Border Radius :
+        - rounded-none, rounded, rounded-sm, md, lg, xl, 2xl, 3xl, full
+        - full → cercle parfait si hauteur = largeur, sinon effet "pill"
+      -->
+      <div class="p-5 mt-5 bg-green-100"></div>
+
+      <h2 class="text-3xl  text-gray-50 mt-10 pb-5">Borders</h2>
+      <!--
+      🔳 On gère la propriété raccourcie "border" à l'aide de trois classes :
+
+      🧱 Épaisseur (border-width) :
+      - border-0,border, border-2|3|4...
+      - Ciblage par côté : border-t-4, border-b-2, etc...
+      - La propriété "border" ajoute également un style "solid" par défaut
+
+      🎨 Couleur (border-color) :
+      - border-red-500, border-black, border-gray-300, etc.
+
+      📏 Style (border-style) :
+      - border-solid, border-dashed, border-dotted, border-double, border-none
+      -->
+
+      <div class="p-5 mt-5 bg-blue-300 "></div>
+
+      <h2 class="text-3xl  text-gray-50 mt-10 pb-5">
+        Séparer des éléments avec une bordure
+      </h2>
+      <!--
+        ➗ Divide (séparateur entre enfants) :
+        - Assez utile avec les layouts flex ou grid
+        - divide-x-4 → séparation verticale entre enfants
+        - divide-y-8 → séparation horizontale
+        - Style possible : divide-solid, divide-dashed...
+
+        Ex : flex divide-x-8 divide-solid
+      -->
+
+      <div class="">
+        <div class="inline-block p-5 bg-red-500">1</div>
+        <div class="inline-block p-5 bg-red-500">2</div>
+        <div class="inline-block p-5 bg-red-500">3</div>
+      </div>
+
+      <h2 class="text-3xl  text-gray-50 mt-10 pb-5">
+        Ring Width/Color/Opacity/Style
+      </h2>
+      <!--
+        Un "ring" est un anneau décoratif autour d’un élément à l'aide d'une box-shadow :
+
+        🔸 Largeur :
+        - ring → 1px par défaut
+        - ring-0, ring-2, ring-4, ring-8...
+
+        🎨 Couleur :
+        - ring-yellow-500, ring-blue-300...
+
+        ⭕ Ring interne (inset) : 
+        - inset-ring → 1px par défaut
+        - inset-ring-0, inset-ring-2, inset-ring-4...
+      -->
+
+      <button class="p-5 bg-green-500 ">Button</button>
+    </div>
+  </body>
+</html>

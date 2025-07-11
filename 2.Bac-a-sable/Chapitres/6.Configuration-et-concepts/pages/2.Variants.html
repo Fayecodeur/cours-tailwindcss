@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Variants</title>
+    <link rel="stylesheet" href="../dist/main.css" />
+  </head>
+  <body class="bg-gray-800 text-white pt-20">
+    <a
+      class="absolute left-4 top-3 flex items-center px-4 py-2 font-semibold bg-gradient-to-r from-slate-300 to-zinc-300 text-gray-800 rounded-sm shadow-sm"
+      href="../../../menu.html"
+    >
+      <span class="text-md">&#8678;</span>
+    </a>
+
+    <h1 class="font-medium text-5xl text-center mb-10">Variants</h1>
+
+    <nav
+      class="max-w-5xl mx-auto flex flex-wrap justify-center gap-6 mb-24 px-10"
+    >
+      <a class="c-link-btn-nav" href="./1.Personnalisation.html"
+        >Personnalisation</a
+      >
+      <a class="c-link-btn-nav" href="./2.Variants.html">Variants</a>
+      <a class="c-link-btn-nav" href="./3.Responsive.html">Responsive</a>
+      <a class="c-link-btn-nav" href="./4.Animations-transitions.html"
+        >Animations-transitions</a
+      >
+      <a class="c-link-btn-nav" href="./5.mode-sombre.html">Mode sombre</a>
+    </nav>
+    <hr class="border-gray-50/35" />
+    <!-- Contenu de la leçon -->
+
+    <div class="max-w-4xl mx-auto pb-60 px-8 pt-10 text-xl">
+      <h2 class="text-3xl text-gray-50 mt-10 pb-5">
+        Définition d'un variant 🚥
+      </h2>
+      <p class="mb-4">
+        Les variants sont des <strong>mots-clés</strong> suivis de
+        <strong>deux-points</strong> et d’une <strong>classe</strong> à
+        appliquer.
+      </p>
+      <p class="mb-4">
+        Ils servent à appliquer du style conditionnelement (Ex:
+        hover:bg-red-400), ainsi qu'à mettre en place des fonctionnalités
+        spéciales (Ex: dark:color-blue-300).
+      </p>
+      <p class="mb-2">Exemples de variants courants :</p>
+      <ul>
+        <li class="mb-2">pseudos-classes : hover:bg-red-400</li>
+        <li class="mb-2">
+          pseudos-éléments : after:content-['*'] after:ml-0.5 after:text-red-500
+        </li>
+        <li class="mb-2">mode sombre : dark:bg-gray-800</li>
+        <li class="mb-2">media queries : md:bg-green-300</li>
+        <li class="mb-2">first-child : first:pt-10</li>
+        <li class="mb-2">Etc...</li>
+      </ul>
+
+      <h2 class="text-3xl text-gray-50 mt-10 pb-5">Les pseudos-classes</h2>
+      <!--
+        🎯 PSEUDO-CLASSES
+
+        survol  => hover:bg-blue-500
+        clic  => active:bg-green-500
+        focus  => focus:outline-none
+       -->
+
+      <div class="size-20 bg-blue-400 mb-20"></div>
+
+      <h2 class="text-3xl text-gray-50 mt-10 pb-5">Les pseudos-élements</h2>
+      <!-- 🧪 PSEUDO-ÉLÉMENTS
+
+        On utilise le variant after: ou before:, puis on rajoute toutes les classes qu'on veut. 
+        Chaque classe va potentiellement instancier le pseudo element avec une propriété content vide, juste au cas où.
+
+        Si on rajoute un contenu perso avec after:content-["xxx"], Tailwind utilisera une variable CSS pour toujours afficher ce contenu quoiqu'il arrive.
+
+        Ex : after:content-['hello_world']
+      -->
+
+      <h1 class="mb-20">Lorem ipsum dolor sit amet.</h1>
+
+      <h2 class="text-3xl  text-gray-50 mt-10 pb-5">
+        Sélection de texte
+      </h2>
+      <!--
+        🎨 SELECTION
+
+        Change le style du texte sélectionné par l’utilisateur :
+
+        selection:bg-fuchsia-300
+        selection:text-fuchsia-900
+      -->
+
+      <div class="mb-20">
+        <p>
+          So I started to walk into the water. I won't lie to you boys, I was
+          terrified. But I pressed on, and as I made my way past the breakers a
+          strange calm came over me. I don't know if it was divine intervention
+          or the kinship of all living things but I tell you Jerry at that
+          moment, I <em>was</em> a marine biologist.
+        </p>
+      </div>
+
+      <h2 class="text-3xl  text-gray-50 mt-10 pb-5">
+        Utiliser la pseudo-class has
+      </h2>
+      <!--
+        🔎 :HAS()
+        
+        Un des dernières grandes nouveautés en CSS natif, dispo avec Tailwind.
+
+        Exemples :
+        - `has-[button]:bg-blue-700` → si un bouton est présent dans l'élément
+        - `has-invalid:bg-red-700`   → si un input invalide est présent
+
+        Pratique pour styliser un parent en fonction de ses enfants.
+      -->
+
+      <div class="p-10 border border-gray-200 rounded max-w-sm mb-40">
+        <h2 class="text-3xl mb-4">3 recettes délicieuses</h2>
+        <p class="mb-12">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio
+          laboriosam optio eum porro impedit perferendis facere modi ipsam
+          veniam voluptate.
+        </p>
+
+        <input type="email" class="mb-2 bg-gray-100" />
+        <button
+          class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded cursor-pointer"
+        >
+          Valider
+        </button>
+      </div>
+
+      <h2 class="text-3xl  text-gray-50 mt-10 pb-5">
+        Styliser avec :nth-child, :first-child, etc...
+      </h2>
+      <!-- 
+      📐 NTH-CHILD & CO
+      
+        Tailwind permet d’appliquer des styles selon la position d’un enfant :
+
+        premier élément → first:pt-10         
+        dernier → last:mb-0           
+        3e enfant → nth-3:bg-red-400    
+        lignes impaires → odd:bg-blue-500     
+        lignes paires → even:bg-gray-200    
+
+        Attention : Il faut appliquer ça directement à l’enfant, pas au parent, ce qui est un peu moins pratique que du CSS natif.
+      -->
+
+      <ul class="list-disc list-inside space-y-2 mb-20 text-gray-50 text-lg">
+        <li>Pommes</li>
+        <li>Cerises</li>
+        <li>Lait</li>
+        <li>Pain</li>
+        <li>Oeufs</li>
+      </ul>
+
+      <h2
+        class="hover:not-focus:bg-indigo-700 text-3xl lg:text-4xl text-gray-50 mt-10 pb-5"
+      >
+        Variants arbitraires
+      </h2>
+      <!-- 
+          🧠 VARIANTS ARBITRAIRES
+          
+          Pour résoudre le problème du dernier exemple, on peut utiliser des variants arbitraires, permettant de cibler plusieurs enfants d'un coup.
+          Ils permettent de faire des sélections CSS directement dans un parent et / ou de gérer des cas précis liés aux attributs d'un élément.
+
+          Exemple :
+          - [&>li:not(:first-child)]:text-blue-500
+          - [&.dragged]:bg-red-400
+
+          👉 Ça ouvre pas mal de possibilités, même si la syntaxe peut être complexe.
+      -->
+      <ul class="list-disc list-inside space-y-2 mb-20 text-gray-50 text-lg">
+        <li>Pommes</li>
+        <li>Cerises</li>
+        <li>Lait</li>
+        <li>Pain</li>
+        <li>Oeufs</li>
+      </ul>
+
+      <h2 class="text-3xl text-gray-50 mt-10 pb-5">
+        Styliser en fonction du parent
+      </h2>
+      <!--
+        🤝 GROUP & GROUP-HOVER
+
+        Il faut ajouter la classe `group` au parent, puis utiliser :
+        `group-hover:bg-red-400` sur l’enfant
+
+        Ça revient à écrire en natif :
+        `.group:hover .group-hover\:bg-red-400`
+
+        Tip : Tailwind utilise `:is(:where(.group):hover *)` pour rester safe niveau compatibilité CSS.
+      -->
+      <div class="flex w-50 h-50 bg-amber-400 p-16">
+        <div class="w-20 h-20 bg-blue-400"></div>
+      </div>
+
+      <h2 class="text-3xl text-gray-50 mt-10 pb-5">Chaîne de variants</h2>
+      <!--
+          🔗 CHAÎNAGE DE VARIANTS
+          Besoin de combiner plusieurs états ?
+
+          Exemple :
+          si l’élément est hover **et** actif (cliqué) → hover:active:bg-amber-400  
+
+          Utile pour gérer des interactions complexes, genre UI de bouton tactile.
+        -->
+      <div class="size-20 bg-red-400"></div>
+
+      <h2 class="text-3xl text-gray-50 mt-10 pb-5">Variant arbitraires 2</h2>
+      <!-- Cette fois, on stylise le parent lui même, en fonction de la présence d'une classe -->
+      <div draggable="true" class="js-draggable-el size-20 bg-green-400"></div>
+    </div>
+
+    <script>
+      const el = document.querySelector(".js-draggable-el")
+
+      el.addEventListener("dragstart", () => el.classList.add("dragged"))
+      el.addEventListener("dragend", () => el.classList.remove("dragged"))
+    </script>
+  </body>
+</html>

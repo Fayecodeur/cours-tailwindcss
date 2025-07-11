@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Grid</title>
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+</head>
+<body class="bg-gray-800 text-white pt-20">
+    
+  <a class="absolute left-4 top-3	 flex items-center  px-4 py-2 font-semibold  bg-gradient-to-r from-slate-300 to-zinc-300 text-gray-800  rounded-sm shadow-sm " href="../../menu.html">
+    <span class="text-md">&#8678;</span>
+  </a>
+  
+  <h1 class="font-medium text-5xl text-center mb-10">Grid</h1>
+
+  <nav class="max-w-5xl mx-auto flex flex-wrap justify-center gap-6 mb-24 px-10">
+    <a
+      class="flex-shrink-0 rounded-lg py-2 w-60 border border-gray-50/50 bg-blue-600 hover:bg-blue-700 text-gray-200 text-lg flex justify-center items-center cursor-pointer"
+      href="./1.flexbox.html"
+      >Flexbox</a
+    >
+    <a
+      class="flex-shrink-0 rounded-lg py-2 w-60 border border-gray-50/50 bg-blue-600 hover:bg-blue-700 text-gray-200 text-lg flex justify-center items-center cursor-pointer"
+      href="./2.css-grid.html"
+      >CSS Grid</a
+    >
+  </nav>
+
+    <hr class="border-gray-50/35">
+     <!-- Contenu de la leçon -->
+
+     <div class="max-w-4xl mx-auto pb-60 px-4">
+      <h2 class="text-3xl  text-gray-50 mt-10 pb-5">CSS Grid</h2>
+      <!--
+        🧱 Initialisation du container (display) :
+        - grid ou inline-grid
+      -->
+
+      <!--
+        📐 Grid Template Columns :
+        - grid-cols-1 jusqu'à grid-cols-12
+        - Définit le nombre de colonnes en `repeat(x, minmax(0, 1fr))`. Tailwind utilise cette syntaxe pour gérer des petits bugs rares avec simplement des colonnes à 1fr.
+        - Valeur arbitraire : grid-cols-[200px_50px_200px] 
+      -->
+
+      <!--
+        📏 Grid Template Rows :
+        - grid-rows-1, grid-rows-2, etc.
+        - Même logique que les colonnes, mais les rangées sont plus rarement définies que les colonnes
+        - Valeur arbitraire : grid-rows-[200px_50px_200px] 
+
+      -->
+
+      <!--
+        🔢 Placement d’éléments :
+        - S'étendre sur 2 colonnes:  col-span-2
+        - S'étendre sur toutes les colonnes : col-span-full 
+        - Commencer ou finir à une colonne précise : col-start-2, col-end-3 → 
+
+        Même syntaxe pour les rangées : row-span-3, row-start-1
+      -->
+
+      <!--
+        🔗 Espacements (gap) :
+        - Espace entre toutes les colonnes et toutes les rangées : gap-1, gap-2, gap-4...
+        - Ajouter un espace horizontal uniquement : gap-x-2 
+        - Ajouter un espace vertical uniquement : gap-y-4 
+      -->
+
+      <div class="bg-gray-200 h-96 p-1">
+        <div class="bg-red-400"></div>
+        <div class="bg-green-400 "></div>
+        <div class="bg-green-400 "></div>
+        <div class="bg-green-400 "></div>
+        <div class="bg-green-400 "></div>
+        <div class="bg-green-400 "></div>
+        <div class="bg-green-400 "></div>
+        <div class="bg-green-400 "></div>
+        <div class="bg-green-400 "></div>
+      </div>
+
+
+    </div>
+</body>
+</html>

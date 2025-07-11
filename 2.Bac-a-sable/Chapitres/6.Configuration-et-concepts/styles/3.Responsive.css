@@ -1,0 +1,11 @@
+/* 
+  👓 Leçon 3 : Responsive
+*/
+
+@theme {
+  /* On peut ajouter des points d'arrêt grâce au nom réservé --breakpoint- */
+
+  /* On peut remplacer un point d'arrête existant en l'écrasant via une variable CSS portant le même nom */
+
+  /* Ou encore supprimer toute la famille de classes/variants responsive, en utilisant --breakpoint-*: initial; */
+}

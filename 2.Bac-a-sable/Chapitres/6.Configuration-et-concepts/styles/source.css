@@ -1,0 +1,74 @@
+@import "tailwindcss";
+@import "./3.Responsive.css";
+@import "./4.animations-transitions.css";
+@import "./5.Mode-sombre.css";
+
+/* 
+  🎨 Leçon 1 : Les bases de la personnalisation
+
+  On utilise la directive @theme pour déclarer des variables CSS que Tailwind pourra utiliser directement dans les classes associées au namespace (nom réservé) utilisé par les variables.
+
+  ✅ Exemple :
+    --color-coffee: brown; 
+    → utilisable via : bg-coffee, text-coffee, border-coffee, etc.
+
+    --spacing-link-gap: 10px; 
+    → utilisable dans : p-*, m-*, w-*, h-*, etc.
+
+  🔗 Liste complète des namespaces disponibles :
+    https://tailwindcss.com/docs/theme#theme-variable-namespaces
+
+  ⚠️ Pour des variables CSS classiques (hors Tailwind), utilisez :root.
+  Notez que les variables définies avec @theme sont aussi injectées dans la page finale.
+*/
+
+
+
+@theme {
+  /*
+    🎨 Polices personnalisées
+    J'ai inclus des polices depuis google fonts dans le fichier : 1.Personnalisation.html
+
+    1. Associons les classes liées aux polices existantes avec les polices importées :
+      - sans-serif : Montserrat
+      - serif      : DM Serif Display
+      - mono       : IBM Plex Mono
+
+    2. Créons une classe de police personnalisée avec : Bungee Tint 
+  */
+  /* --font-sans: "Montserrat";
+  --font-serif: "DM Serif Display";
+  --font-mono: "IBM Plex Mono";
+  --font-bungee-tint: "Bungee Tint"; */
+
+  /*
+    🧱 Exemple de remplacement d’une famille de classes.
+    Ici on désactive les shadows par défaut, puis on définit notre propre classe.
+
+    Attention, si vous désactivez le nom réservé 'color', vous supprimez toutes les classes Tailwind liées aux couleurs. Il faut donc par la suite recréer une palette de couleurs complète.
+  */
+
+}
+
+/* 
+  ✨ Classes personnalisées
+  
+  Il est recommandé d'utiliser les layers CSS (base, components, utilities) pour mieux organiser vos classes custom et éviter les conflits de spécificité.
+
+  🌊 Les layers CSS sont des "sous-cascades" permettant d'isoler des contextes de spécificité.
+
+  📐 Ordre des layers (du plus faible au plus fort) :
+    @layer theme, base, components, utilities;
+*/
+
+
+
+
+
+/* Style réutilisé dans la structure du cours */
+
+@layer components {
+  .c-link-btn-nav {
+    @apply flex-shrink-0 rounded-lg py-2 w-60 border border-gray-50/50 bg-blue-600 hover:bg-blue-700 text-gray-200 text-lg flex justify-center items-center cursor-pointer;
+  }
+}

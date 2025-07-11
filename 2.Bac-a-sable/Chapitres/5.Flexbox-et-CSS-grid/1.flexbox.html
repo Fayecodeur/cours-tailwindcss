@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flexbox</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  </head>
+  <body class="bg-gray-800 text-white pt-20">
+    <a
+      class="absolute left-4 top-3 flex items-center px-4 py-2 font-semibold bg-gradient-to-r from-slate-300 to-zinc-300 text-gray-800 rounded-sm shadow-sm"
+      href="../../menu.html"
+    >
+      <span class="text-md">&#8678;</span>
+    </a>
+
+    <h1 class="font-medium text-5xl text-center mb-10">Flexbox</h1>
+
+    <nav
+      class="max-w-5xl mx-auto flex flex-wrap justify-center gap-6 mb-24 px-10"
+    >
+      <a
+        class="flex-shrink-0 rounded-lg py-2 w-60 border border-gray-50/50 bg-blue-600 hover:bg-blue-700 text-gray-200 text-lg flex justify-center items-center cursor-pointer"
+        href="./1.flexbox.html"
+        >Flexbox</a
+      >
+      <a
+        class="flex-shrink-0 rounded-lg py-2 w-60 border border-gray-50/50 bg-blue-600 hover:bg-blue-700 text-gray-200 text-lg flex justify-center items-center cursor-pointer"
+        href="./2.css-grid.html"
+        >CSS Grid</a
+      >
+    </nav>
+
+    <hr class="border-gray-50/35" />
+    <!-- Contenu de la leçon -->
+
+    <div class="max-w-4xl mx-auto pb-60 px-4">
+      <h2 class="text-3xl  text-gray-50 mt-10 pb-5">Flexbox</h2>
+
+      <!--
+          🚀 Initialisation de Flexbox (display):
+          - flex ou inline-flex
+
+          🎯 Alignement sur le main axis (justify-content) :
+          - justify-start|end|center|between|around|evenly
+
+          🏗️ Alignement sur le cross axis (align-items) :
+          - items-start|end|center|baseline|stretch
+
+          🔁 Direction du flux (flex-direction) :
+          - flex-row|row-reverse|col|col-reverse
+
+          🔽 Gestion du retour à la ligne (flex-wrap) :
+          - flex-wrap|nowrap|wrap-reverse
+
+          🧩 Alignement multi-ligne (align-content) :
+          - content-start|end|center|between|around|evenly
+
+          🔗 Espacements (gap) :
+          - Espace entre tous les flex-items : gap-1, gap-2, gap-4...
+          - Ajouter un espace horizontal uniquement : gap-x-2 
+          - Ajouter un espace vertical uniquement : gap-y-4 
+        -->
+
+      <div class="bg-gray-200 gap-4">
+        <div class="w-20 h-20 bg-green-400"></div>
+        <div class="w-20 h-20 bg-green-400"></div>
+        <div class="w-20 h-20 bg-green-400"></div>
+      </div>
+
+      <h2 class="text-3xl  text-gray-50 mt-10 pb-5">
+        Propriétés pour les enfants
+      </h2>
+      <!--
+          🔧 Propriétés des enfants dans un conteneur flex :
+
+          ➕ flex-grow / grow :
+          - flex-grow → l’élément prend toute la place dispo dans sa ligne
+          - flex-grow-0 → ne grandit pas
+
+          ➖ flex-shrink :
+          - flex-shrink / shrink → rétrécit si besoin
+          - flex-shrink-0 → ne rétrécit pas
+
+          ⚙️ flex (prop raccourcie) :
+          - flex-1, flex-auto, flex-initial, flex-none
+          - Combine grow, shrink et basis
+
+          🔢 order :
+          - order-1|2|3|etc...
+          - order-first|last|none
+
+          🧍 align-self :
+          - self-start|end|center|stretch
+
+
+        -->
+
+      <div class="h-32 bg-gray-200">
+        <div class="w-20 h-20 bg-green-400 m-4"></div>
+        <div class="w-20 h-20 bg-black m-4"></div>
+        <div class="w-20 h-20 bg-blue-900 m-4"></div>
+      </div>
+    </div>
+  </body>
+</html>

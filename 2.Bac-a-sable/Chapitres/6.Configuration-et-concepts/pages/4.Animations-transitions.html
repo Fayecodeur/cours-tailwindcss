@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Animations</title>
+    <link rel="stylesheet" href="../dist/main.css" />
+  </head>
+  <body class="bg-gray-800 text-white pt-20">
+    <a
+      class="absolute left-4 top-3 flex items-center px-4 py-2 font-semibold bg-gradient-to-r from-slate-300 to-zinc-300 text-gray-800 rounded-sm shadow-sm"
+      href="../../../menu.html"
+    >
+      <span class="text-md">&#8678;</span>
+    </a>
+
+    <h1 class="font-medium text-5xl text-center mb-10">
+      Animations
+    </h1>
+
+    <nav
+      class="max-w-5xl mx-auto flex flex-wrap justify-center gap-6 mb-24 px-10"
+    >
+      <a class="c-link-btn-nav" href="./1.Personnalisation.html"
+        >Personnalisation</a
+      >
+      <a class="c-link-btn-nav" href="./2.Variants.html">Variants</a>
+      <a class="c-link-btn-nav" href="./3.Responsive.html">Responsive</a>
+      <a class="c-link-btn-nav" href="./4.Animations-transitions.html"
+        >Animations-transitions</a
+      >
+      <a class="c-link-btn-nav" href="./5.mode-sombre.html">Mode sombre</a>
+    </nav>
+
+    <hr class="border-gray-50/35" />
+    <!-- Contenu de la leçon -->
+
+    <div class="max-w-4xl mx-auto pb-60 px-4 wiggle">
+      <h2 class="text-3xl  text-gray-50 mt-10 pb-5 animate-fade">
+        Les animations
+      </h2>
+
+      <!--
+       Il existe des animations prêtes à l'emploi, directement disponibles de base.
+       - animate-spin : Fais tourner l'élément
+       - animate-ping : Crée une animation effet sonar
+       - animate-pulse : Crée une animation d'apparition - disparation
+       - animate-bounce : Fais rebondir l'élément 
+      -->
+
+      <!-- Spin : animate-spin -->
+      <div
+        class="w-10 h-10 border-[5px] rounded-full border-slate-200 border-r-indigo-900 mt-10"
+      ></div>
+
+      <!-- Ping : animate-ping -->
+      <div class="w-10 h-10 rounded-full bg-blue-200 mt-10"></div>
+
+      <!-- Pulse : animate-pulse -->
+      <div class="w-10 h-10 rounded-full bg-blue-200 mt-10"></div>
+
+      <!-- Bounce : animate-bounce -->
+      <div class="w-10 h-10 rounded-full bg-blue-200 mt-10"></div>
+
+      <h2 class="text-3xl  text-gray-50 mt-10 pb-5">Le Survol</h2>
+      <!-- On utilise le variant hover: pour animer ou changer de propriété au survol -->
+
+      <div
+        class="w-10 h-10 border-[5px] rounded-full border-slate-200 border-r-blue-500 mt-10"
+      ></div>
+
+      <h2 class="text-3xl  text-gray-50 mt-10 pb-5">
+        Animation perso
+      </h2>
+      <!-- 
+        Pour créer une animation complète et personnalisée, il est recommandé de créer le keyframes dans le layer @theme ainsi qu'une variable utilisant le namespace --animate-xxx.
+      -->
+      <div class="size-40 bg-amber-400"></div>
+
+      <h2 class="text-3xl  text-gray-50 mt-10 pb-5">
+        Les transitions
+      </h2>
+      <!-- On peut ajouter des transitions de certaines propriétés par défaut, elles auront une duration de 300ms et un easing "ease-in-out" :
+      - transition-opacity 
+      - transition-transform 
+      - transition-shadow 
+      - transition-colors // Ajoute une transition pour toutes les propriétés liées aux couleurs
+
+      Mais aussi : 
+      - transition-all // transitionne toutes les propriétés, mauvaise pratique 
+      - transition-none
+      -->
+
+      <!-- Pour gérer les caractéristiques de la transition :
+       - prop transition-duration : duration-number(ms) ou valeur arbitraire
+       - prop transition-timing-function : ease-in/out/in-out/...
+       - prop transition-delay : delay-number(ms) ou valeur arbitraire
+       
+      -->
+
+      <div
+        class="size-40 bg-blue-500 hover:-translate-y-1 hover:scale-110 hover:bg-indigo-500"
+      ></div>
+    </div>
+  </body>
+</html>

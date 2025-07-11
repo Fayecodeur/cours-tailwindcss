@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Typographie</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Boldonse&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  </head>
+  <body class="bg-gray-800 text-white pt-20">
+    <a
+      class="absolute left-4 top-3 flex items-center px-4 py-2 font-semibold bg-gradient-to-r from-slate-300 to-zinc-300 text-gray-800 rounded-sm shadow-sm"
+      href="../../menu.html"
+    >
+      <span class="text-md">&#8678;</span>
+    </a>
+
+    <h1 class="font-medium text-5xl text-center mb-24">
+      La Typographie
+    </h1>
+
+    <hr class="border-gray-50/35" />
+    <!-- Contenu de la leçon -->
+
+    <div class="max-w-4xl mx-auto pb-60 px-4">
+      <h2 class="text-3xl  text-gray-50 mt-10 pb-5">Font-Size</h2>
+      <!--
+        🔤 Taille du texte (font-size) :
+        - text-xs, text-sm, text-base, text-lg...
+        - Jusqu’à text-9xl pour les très grandes tailles
+
+        🧪 Valeur arbitraire :
+        - text-[39px] → Crée une classe arbitraire
+      -->
+
+      <p class="">Lorem ipsum dolor sit amet.</p>
+      <p class="">Lorem ipsum dolor sit amet.</p>
+      <p class="">Lorem ipsum dolor sit amet.</p>
+      <p class="">Lorem ipsum dolor sit amet.</p>
+
+      <h2 class="text-3xl  text-gray-50 mt-10 pb-5">Line-height</h2>
+      <!--
+        📏 Hauteur de ligne (line-height) :
+        - leading-none → line-height: 1
+        - leading-0 à leading-96 → échelle identique à celle des espacements
+          (ex : leading-60 = calc(var(--spacing) * 60))
+
+        🧩 Variante combinée :
+        - text-lg/10 → combine la taille et la hauteur de ligne dans une seule classe
+      -->
+
+      <p class="bg-amber-500 text-slate-900 mb-3">
+        Lorem ipsum dolor sit amet.
+      </p>
+      <p class="bg-amber-500 text-slate-900 mb-3">
+        Lorem ipsum dolor sit amet.
+      </p>
+      <p class="bg-amber-500 text-slate-900 mb-3">
+        Lorem ipsum dolor sit amet.
+      </p>
+
+      <h2 class="text-3xl  text-gray-50 mt-10 pb-5">
+        Poids de la police
+      </h2>
+      <!--
+        🅰️ Poids de la police :
+        - font-thin, font-light, font-normal, font-semibold, font-bold...
+        - Jusqu’à font-black pour les polices très épaisses
+      -->
+      <p class="">Lorem ipsum dolor sit amet.</p>
+
+      <h2 class="text-3xl  text-gray-50 mt-10 pb-5">Font Family</h2>
+
+      <!--
+        🖋️ Famille de police (font-family) :
+        - font-sans, font-serif, font-mono → les valeurs par défaut
+        
+        On vera plus tard comment personnaliser les valeurs sans|serif|mono avec d'autres polices. 
+
+        🎨 Personnalisation :
+        - On peut aussi intégrer sa propre police puis l'utiliser avec une classe arbitraire font-[customFont]
+        - La police "Boldonse" est importée sur cette page dans le <head>, on peut donc l'utiliser en tant que classe arbitraire
+        
+          Ex : font-[Boldonse] → police importée via Google Fonts
+      -->
+
+      <p class="">Lorem ipsum dolor sit amet.</p>
+      <p class="">Lorem ipsum dolor sit amet.</p>
+
+      <h2 class="text-3xl  text-gray-50 mt-10 pb-5">
+        Text Overflow
+      </h2>
+      <!--
+        ✂️ Text overflow :
+        - truncate → coupe le texte et ajoute des points de suspension si ça dépasse
+
+        Cette classe applique :
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+      -->
+
+      <p class="w-40 bg-green-600 mb-20">UnLongPseudoQuiEstVraimentTropLong</p>
+    </div>
+  </body>
+</html>
