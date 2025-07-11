@@ -1,46 +1,40 @@
 <!DOCTYPE html>
 <html lang="fr">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Couleurs et fonds</title>
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-  </head>
-  <body class="bg-gray-800 text-white pt-20">
-    <a
-      class="absolute left-4 top-3 flex items-center px-4 py-2 font-semibold bg-gradient-to-r from-slate-300 to-zinc-300 text-gray-800 rounded-sm shadow-sm"
-      href="../../menu.html"
-    >
-      <span class="text-md ">&#8678;</span>
-    </a>
 
-    <h1 class="font-medium text-5xl text-center mb-10">
-      Couleurs et fonds
-    </h1>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Couleurs et fonds</title>
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
 
-    <nav class="max-w-5xl mx-auto flex flex-wrap justify-center gap-6 mb-24 px-10">
-      <a
-        class="flex-shrink-0 rounded-lg py-2 w-60 border border-gray-50/50 bg-blue-600 hover:bg-blue-700 text-gray-200 text-lg flex justify-center items-center cursor-pointer"
-        href="./1.couleurs-et-fonds.html"
-        >Couleurs et fonds</a
-      >
-      <a
-        class="flex-shrink-0 rounded-lg py-2 w-60 border border-gray-50/50 bg-blue-600 hover:bg-blue-700 text-gray-200 text-lg flex justify-center items-center cursor-pointer"
-        href="./2.bordures.html"
-        >Bordures</a
-      >
-    </nav>
+<body class="bg-gray-800 text-white pt-20">
+  <a class="absolute left-4 top-3 flex items-center px-4 py-2 font-semibold bg-gradient-to-r from-slate-300 to-zinc-300 text-gray-800 rounded-sm shadow-sm"
+    href="../../menu.html">
+    <span class="text-md ">&#8678;</span>
+  </a>
 
-    <hr class="border-gray-50/35" />
+  <h1 class="font-medium text-5xl text-center mb-10">
+    Couleurs et fonds
+  </h1>
 
-    <!-- Contenu de la leçon -->
+  <nav class="max-w-5xl mx-auto flex flex-wrap justify-center gap-6 mb-24 px-10">
+    <a class="flex-shrink-0 rounded-lg py-2 w-60 border border-gray-50/50 bg-blue-600 hover:bg-blue-700 text-gray-200 text-lg flex justify-center items-center cursor-pointer"
+      href="./1.couleurs-et-fonds.html">Couleurs et fonds</a>
+    <a class="flex-shrink-0 rounded-lg py-2 w-60 border border-gray-50/50 bg-blue-600 hover:bg-blue-700 text-gray-200 text-lg flex justify-center items-center cursor-pointer"
+      href="./2.bordures.html">Bordures</a>
+  </nav>
 
-    <div class="max-w-4xl mx-auto pb-60 px-4">
-      <h2 class="text-3xl  text-gray-50 mt-10 pb-5">
-        Les backgrounds
-      </h2>
-      <!-- 
+  <hr class="border-gray-50/35" />
+
+  <!-- Contenu de la leçon -->
+
+  <div class="max-w-4xl mx-auto pb-60 px-4">
+    <h2 class="text-3xl  text-gray-50 mt-10 pb-5">
+      Les backgrounds
+    </h2>
+    <!-- 
         ✨ Vous avez accès à une jolie palette de couleurs par défaut avec Tailwind CSS !
 
         📘 Découvrez-les ici : https://tailwindcss.com/docs/customizing-colors
@@ -55,66 +49,66 @@
           - text-red-400 → text color
           - border-red-400 → border color
       -->
-      <div class="p-10 mt-5"></div>
-      <div class="p-10 mt-5"></div>
+    <div class="p-10 mt-5 bg-green-300"></div>
+    <div class="p-10 mt-5 bg-slate-50"></div>
 
-      <!--
+    <!--
         👓 Opacité d’une couleur via `classeDeCouleur/valeur` (utilise rgba)
         Ex : bg-slate-900/5
       -->
-      <div class="p-10 mt-5"></div>
+    <div class="p-10 mt-5 bg-yellow-500/45"></div>
 
-      <h2 class="text-3xl  text-gray-50 mt-10 pb-5">
-        Couleur du texte
-      </h2>
-      <!--
+    <h2 class="text-3xl  text-gray-50 mt-10 pb-5">
+      Couleur du texte
+    </h2>
+    <!--
         🖍️ Coloriser le texte fonctionne comme pour le background,
         mais en utilisant le mot-clé `text-couleur-nuance`.
         Ex : text-red-400
       -->
 
-      <p class="">Lorem ipsum dolor sit amet.</p>
-      <p class="">Lorem ipsum dolor sit amet.</p>
-      <p class="">Lorem ipsum dolor sit amet.</p>
+    <p class="text-xl text-red-500">Lorem ipsum dolor sit amet.</p>
+    <p class="text-xl">Lorem ipsum dolor sit amet.</p>
+    <p class="text-xl">Lorem ipsum dolor sit amet.</p>
 
-      <h2 class="text-3xl  text-gray-50 mt-10 pb-5">Dégradés</h2>
-      <!--
+    <h2 class="text-3xl  text-gray-50 mt-10 pb-5">Dégradés</h2>
+    <!--
         🟩 Ajouter un dégradé :
           - Direction : bg-gradient-to-r|tr|tl|b|br|bl
           - Couleurs : from-x-x, to-x-x
           Ex : bg-gradient-to-r from-cyan-500 to-blue-500
       -->
-      <div class="p-10 mt-5"></div>
+    <div class="p-10 mt-5 bg-gradient-to-r from-cyan-500 to-blue-500"></div>
 
-      <!--
+    <!--
         🎨 Ajouter une couleur intermédiaire : via-x-x
         ⚠️ Limité à 3 couleurs max (from-x-x → via-x-x → to-x-x)
         Ex : bg-gradient-to-r from-red-500 via-red-200 to-green-500
       -->
-      <div class="p-10 mt-5"></div>
+    <div class="p-10 mt-5"></div>
 
-      <!--
+    <!--
         🧪 Pour un dégradé personnalisé ou plus complexe, utilisez une valeur arbitraire
         Ex : bg-[linear-gradient(to_bottom,#ef4444_0%,#ef4444_33.33%,#ffffff_33.33%,#ffffff_66.66%,#3b82f6_66.66%,#3b82f6_100%)]
       -->
-      <div class="h-40 w-full"></div>
+    <div class="h-40 w-full"></div>
 
-      <!--
+    <!--
         🎯 Dégradé radial :
         Ex : bg-radial from-gray-50 to-fuchsia-700
       -->
-      <div class="size-40 mt-5"></div>
+    <div class="size-40 mt-5"></div>
 
-      <!--
+    <!--
         🌀 Dégradé conique :
         Ex : bg-conic from-blue-600 to-sky-400
       -->
-      <div class="size-40 mt-5"></div>
+    <div class="size-40 mt-5"></div>
 
-      <h2 class="text-3xl  text-gray-50 mt-10 pb-5">
-        Background image
-      </h2>
-      <!--
+    <h2 class="text-3xl  text-gray-50 mt-10 pb-5">
+      Background image
+    </h2>
+    <!--
         🖼️ Propriétés de background + équivalents Tailwind :
           - background-size : bg-auto|cover|contain
           - background-repeat : bg-repeat|no-repeat
@@ -125,25 +119,26 @@
           Ex : bg-[url('./img-bg.jpg')] bg-no-repeat bg-cover bg-center
       -->
 
-      <div class="size-80"></div>
+    <div class="size-80 bg-[url('./img-bg.jpg')] bg-no-repeat bg-cover bg-center"></div>
 
-      <h2 class="text-3xl  text-black-50 mt-10 pb-5">Box Shadow</h2>
-      <!--
+    <h2 class="text-3xl  text-black-50 mt-10 pb-5">Box Shadow</h2>
+    <!--
         🧱 Ombres avec Tailwind :
           - shadow-2xs...2xl
           - Couleur : shadow-red-400
       -->
 
-      <div class="p-10 mt-5 bg-green-100"></div>
+    <div class="p-10 mt-5 bg-green-100"></div>
 
 
 
-      <h2 class="text-3xl  text-black-50 mt-10 pb-5">Opacity</h2>
-      <!--
+    <h2 class="text-3xl  text-black-50 mt-10 pb-5">Opacity</h2>
+    <!--
         🌫️ Gérer l’opacité d’un élément :
         - opacity-0...100
       -->
-      <div class="size-40 mt-5 bg-amber-400"></div>
-    </div>
-  </body>
+    <div class="size-40 mt-5 bg-amber-400"></div>
+  </div>
+</body>
+
 </html>
