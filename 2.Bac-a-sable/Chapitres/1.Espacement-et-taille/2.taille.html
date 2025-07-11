@@ -1,43 +1,38 @@
 <!DOCTYPE html>
 <html lang="fr">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Sizing</title>
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-  </head>
-  <body class="bg-gray-800 text-white pt-20">
-    <a
-      class="absolute left-4 top-3 flex items-center px-4 py-2 font-semibold bg-gradient-to-r from-slate-300 to-zinc-300 text-gray-800 rounded-sm shadow-sm"
-      href="../../menu.html"
-    >
-      <span class="text-md">&#8678;</span>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sizing</title>
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+
+<body class="bg-gray-800 text-white pt-20">
+  <a class="absolute left-4 top-3 flex items-center px-4 py-2 font-semibold bg-gradient-to-r from-slate-300 to-zinc-300 text-gray-800 rounded-sm shadow-sm"
+    href="../../menu.html">
+    <span class="text-md">&#8678;</span>
+  </a>
+
+  <h1 class="font-medium text-5xl text-center mb-10">
+    La Taille
+  </h1>
+
+  <nav class="flex flex-wrap justify-center gap-6 mb-14">
+    <a class="flex-shrink-0 rounded-lg py-2 w-60 border border-gray-50/50 bg-blue-600 hover:bg-blue-700 text-gray-200 text-lg flex justify-center items-center cursor-pointer"
+      href="./1.espacement.html">Margin / Padding
     </a>
+    <a class="flex-shrink-0 rounded-lg py-2 w-60 border border-gray-50/50 bg-blue-600 hover:bg-blue-700 text-gray-200 text-lg flex justify-center items-center cursor-pointer"
+      href="./2.taille.html">Width / Height</a>
+  </nav>
 
-    <h1 class="font-medium text-5xl text-center mb-10">
-      La Taille
-    </h1>
+  <hr class="border-gray-50/35" />
+  <!-- Contenu de la leçon -->
 
-    <nav class="flex flex-wrap justify-center gap-6 mb-14">
-      <a
-        class="flex-shrink-0 rounded-lg py-2 w-60 border border-gray-50/50 bg-blue-600 hover:bg-blue-700 text-gray-200 text-lg flex justify-center items-center cursor-pointer"
-        href="./1.espacement.html"
-        >Margin / Padding
-      </a>
-      <a
-        class="flex-shrink-0 rounded-lg py-2 w-60 border border-gray-50/50 bg-blue-600 hover:bg-blue-700 text-gray-200 text-lg flex justify-center items-center cursor-pointer"
-        href="./2.taille.html"
-        >Width / Height</a
-      >
-    </nav>
-
-    <hr class="border-gray-50/35" />
-    <!-- Contenu de la leçon -->
-
-    <div class="max-w-4xl mx-auto pb-60 px-4">
-      <h2 class="text-3xl  text-gray-50 mt-10 mb-5">Width</h2>
-      <!--
+  <div class="max-w-4xl mx-auto pb-60 px-4">
+    <h2 class="text-3xl  text-gray-50 mt-10 mb-5">Width</h2>
+    <!--
         📏 Largeur (width) : plusieurs façons de définir une taille
 
         🔸 Valeurs numériques via l’échelle de 0 à 96
@@ -59,17 +54,17 @@
             - w-min / w-max / w-fit → selon le contenu ou le conteneur
       -->
 
-      <p class="bg-blue-600">Lorem ipsum dolor sit amet.</p>
-      <p class="bg-blue-600">Lorem ipsum dolor sit amet.</p>
-      <p class="bg-blue-600">Lorem ipsum dolor sit amet.</p>
-      <p class="bg-blue-600">Lorem ipsum dolor sit amet.</p>
-      <p class="bg-blue-600">Lorem ipsum dolor sit amet.</p>
+    <p class="w-1/2 bg-blue-600">Lorem ipsum dolor sit amet.</p>
+    <p class="max-w-md bg-blue-600">Lorem ipsum dolor sit amet.</p>
+    <p class="bg-blue-600">Lorem ipsum dolor sit amet.</p>
+    <p class="bg-blue-600">Lorem ipsum dolor sit amet.</p>
+    <p class="bg-blue-600">Lorem ipsum dolor sit amet.</p>
 
-      <h2 class="text-3xl  text-gray-50 mt-10 mb-5">
-        Min/Max Width
-      </h2>
+    <h2 class="text-3xl  text-gray-50 mt-10 mb-5">
+      Min/Max Width
+    </h2>
 
-      <!--
+    <!--
         ➖ Min-width : min-w-xs, min-w-sm, jusqu’à min-w-7xl
             
         ➕ Max-width : max-w-xs, max-w-xl, max-w-full...
@@ -77,35 +72,36 @@
         Toutes les valeurs de width vues plus haut sont valables pour min et max-width.
       -->
 
-      <button class="bg-blue-600 p-5 mb-3">Bouton min width</button>
-      <p class="bg-blue-600">Max width.</p>
+    <button class="min-w-lg bg-blue-600 p-5 mb-3">Bouton min width</button>
+    <p class=" max-w-xs bg-blue-600">Max width.</p>
 
-      <h2 class="text-3xl  text-gray-50 mt-10 mb-5">Height</h2>
+    <h2 class="text-3xl  text-gray-50 mt-10 mb-5">Height</h2>
 
-      <!--
+    <!--
         📏 Hauteur (height) : Même logique que pour width, en remplaçant "w" par "h"
         Ex : h-0, h-64, h-screen, h-[50px], h-1/2...
 
         🧩 Et les classes Tailwind de min et max-height fonctionnent comme celles de min et max-width.
       -->
 
-      <p class="bg-blue-600">Lorem ipsum dolor sit amet.</p>
-      <p class="bg-blue-600">Lorem ipsum dolor sit amet.</p>
-      <p class="bg-blue-600">Lorem ipsum dolor sit amet.</p>
-      <p class="bg-blue-600">Lorem ipsum dolor sit amet.</p>
-      <p class="bg-blue-600">Lorem ipsum dolor sit amet.</p>
+    <p class="bg-blue-600">Lorem ipsum dolor sit amet.</p>
+    <p class="bg-blue-600">Lorem ipsum dolor sit amet.</p>
+    <p class="bg-blue-600">Lorem ipsum dolor sit amet.</p>
+    <p class="bg-blue-600">Lorem ipsum dolor sit amet.</p>
+    <p class="bg-blue-600">Lorem ipsum dolor sit amet.</p>
 
-      <h2 class="text-3xl  text-gray-50 mt-10 mb-5">
-        Size, pour ajouter une largeur et une hauteur en même temps
-      </h2>
-      <!--
+    <h2 class="text-3xl  text-gray-50 mt-10 mb-5">
+      Size, pour ajouter une largeur et une hauteur en même temps
+    </h2>
+    <!--
         🔁 Taille combinée :
         La classe size-x applique la même valeur à width et height
         
         Ex : size-44 → width: 11rem + height: 11rem
       -->
 
-      <div class="bg-violet-500 rounded p-3 text-gray-50">01</div>
-    </div>
-  </body>
+    <div class=" size-40 bg-violet-500 rounded p-3 text-gray-50">01</div>
+  </div>
+</body>
+
 </html>
